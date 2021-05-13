@@ -1,1 +1,1 @@
-print("Puthon Course - Atelierul Digital")
+print("Python Course - Google Atelierul Digital")
