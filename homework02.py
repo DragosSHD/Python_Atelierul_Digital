@@ -44,7 +44,7 @@ print(my_recursive_function(5, 'even'))
 
 print()
 
-# Test the function that checks for integer
+# Test the function that checks for integer:
 print(check_integer(21))
 print(check_integer("A String"))
 print(check_integer(23.42))
