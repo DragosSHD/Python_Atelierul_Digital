@@ -57,6 +57,8 @@ def format_price(str_price):
     return float(str_price)
 
 
+# This function check if there is any difference between the prices stored previously in the JSON file.
+# If a difference in price is found, it will be displayed along with the name of the product.
 def compare_product_prices(file_name, crt_array):
     prev_array = []
     differences_dict = {}
@@ -82,6 +84,7 @@ def compare_product_prices(file_name, crt_array):
         print('With a price difference of: ' + str(value_price) + ' lei.\n')
 
 
+# The main function of this file, which is called from the main.py
 def get_product_list(page_url):
     attributes = ['Product Name', 'Price', 'Stock', 'Available Sizes']
     xtremz_products = []
