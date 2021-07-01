@@ -52,7 +52,8 @@ def check_if_file_exists(file_name):
 
 # Get a float from the price string.
 def format_price(str_price):
-    str_price = str_price.split('.')[0] + str_price.split('.')[1]  # remove the '.'
+    if str_price.find('.') > 0:
+        str_price = str_price.split('.')[0] + str_price.split('.')[1]  # remove the '.'
     str_price = str_price.split(',')[0] + '.' + str_price.split(',')[1]  # replace ',' with '.'
     return float(str_price)
 
@@ -76,7 +77,7 @@ def compare_product_prices(file_name, crt_array):
                     differences_dict[crt_prod_info['Product Name']] = price_diff
                     break
     if count_diff == 0:
-        print('No difference has been found!')
+        print('No difference has been found! (in terms of price) ')
     else:
         print('There are ' + str(count_diff) + ' differences for the products:\n')
     for key_name, value_price in differences_dict.items():
