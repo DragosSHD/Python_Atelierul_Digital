@@ -1,4 +1,4 @@
-from web_scrapper import *
+from web_scraper import *
 
 print('Hi! Let\'s start web scrapping. Enter the category link below: ')
 print('Example link: https://xtrems.ro/84-casti')
