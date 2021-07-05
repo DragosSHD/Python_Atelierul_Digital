@@ -54,7 +54,8 @@ def check_if_file_exists(file_name):
 def format_price(str_price):
     if str_price.find('.') > 0:
         str_price = str_price.split('.')[0] + str_price.split('.')[1]  # remove the '.'
-    str_price = str_price.split(',')[0] + '.' + str_price.split(',')[1]  # replace ',' with '.'
+    if str_price.find(',') > 0:
+        str_price = str_price.split(',')[0] + '.' + str_price.split(',')[1]  # replace ',' with '.'
     return float(str_price)
 
 
